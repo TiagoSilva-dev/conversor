@@ -1,21 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image, Button, TextInput, TouchableOpacity, } from 'react-native';
+import Conversor from './src/Conversor';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+
+    return (
+      <View style={Styles.container}>
+        <Conversor moedaA="USD" moedaB="BRL"/>
+      </View>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor:'#F6F6F6'
   },
 });
+
+export default App;
+
