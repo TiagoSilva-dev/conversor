@@ -15,7 +15,7 @@ class App extends Component {
 
     return (
       <View style={Styles.container}>
-        <Conversor moedaA="USD" moedaB="BRL"/>
+        <Conversor moedaA="" moedaB=""/>
       </View>
     );
   }
